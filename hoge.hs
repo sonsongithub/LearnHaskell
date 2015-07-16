@@ -55,3 +55,8 @@ tellList4 x y
 	|z > 0 = "x*y is larger than 0"
 	|otherwise = "other case....?"
 	where z = x * y
+
+-- case
+caseTest :: [a] -> String
+caseTest xs = case xs of [] -> "error"
+                         ls -> "more elements"
