@@ -6,7 +6,7 @@ sumThreeNum x y z = x + y + z
 -- 13
 -- *Main> 
 
--- Quick sort
+-- Recursive, Quick sort
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
 quicksort (x:xs) = 
