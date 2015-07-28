@@ -13,7 +13,6 @@
 
 
 ### Example
-
 	*Main> numUniques [10, 10]
 	1
 	*Main> numUniques [10, 11]
@@ -40,3 +39,26 @@
 	*Main> map (\xs->(head xs, length xs)) (group $ sort $ words t)
 	[("wa",3),("wee",1)]
 	*Main> 
+
+### Caesar cipher
+	-- Caesar cipher
+	encode :: Int -> String -> String
+	encode offset msg = map (\c -> chr $ ord c + offset) msg
+
+	decode :: Int -> String -> String
+	decode offset msg = encode (negate offset) msg
+
+### Example
+	*Main> numUniques [10, 20, 11]
+	3
+	*Main> decode 2 $ encode 2 "sonson"
+	"sonson"
+	*Main> 
+	*Main> digit
+	digitSum    digitToInt
+	*Main> digitSum 213
+	6
+	*Main> firstToN 40
+	Just 49999
+	*Main> 
+
