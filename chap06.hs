@@ -12,6 +12,7 @@ encode offset msg = map (\c -> chr $ ord c + offset) msg
 decode :: Int -> String -> String
 decode offset msg = encode (negate offset) msg
 
+-- Find nice number
 digitSum :: Int -> Int
 digitSum = sum . map digitToInt . show
 
